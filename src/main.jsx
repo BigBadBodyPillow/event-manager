@@ -8,7 +8,9 @@ import './index.css';
 //components
 import App from './App.jsx';
 import Home from './components/Home.jsx';
+import AddEvent from './components/AddEvent.jsx';
 import Dashboard from './components/Dashboard.jsx';
+import Help from './components/Help.jsx';
 
 //routes
 const router = createBrowserRouter([
@@ -21,10 +23,26 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: '/addevent',
+    element: (
+      <App>
+        <AddEvent />
+      </App>
+    ),
+  },
+  {
     path: '/dashboard',
     element: (
       <App>
         <Dashboard />
+      </App>
+    ),
+  },
+  {
+    path: '/help',
+    element: (
+      <App>
+        <Help />
       </App>
     ),
   },
