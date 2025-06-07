@@ -7,7 +7,7 @@
 }
 #root {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,32 +17,24 @@
   background-color: var(--accent);
   color: black;
 }
-body {
-  overflow-x: hidden;
-}
 main {
-  width: 80%;
   max-width: 1000px;
+  width: fit-content;
   margin-block: auto;
-  height: 3000px;
+
   border: 1px solid var(--border_colour);
   border-radius: 8px;
-  padding: 0.25rem 2rem;
+  padding: 2rem 2rem;
 
   margin-top: 8rem;
   margin-bottom: 5rem;
 
   box-shadow: 0 0 4px var(--border_colour);
-  background-color: rgba(17, 17, 17, 0.2);
+  /* background-color: rgba(17, 17, 17, 0.2); */
   backdrop-filter: blur(1px);
 }
-
-.background {
-  background-color: black;
-  width: 100%;
-  height: 100%;
-
-  inset: 0;
-  position: fixed;
-  z-index: -1;
+h2 {
+  margin: 0;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
 }

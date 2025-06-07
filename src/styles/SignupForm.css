@@ -1,0 +1,36 @@
+.signup-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.signup-container form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-container form div {
+  width: 100%;
+}
+
+.switch-to-login {
+  cursor: pointer;
+  margin-left: auto;
+  /* position: absolute;
+  bottom: 0;
+  right: 0; */
+}
+.switch-to-login::after {
+  content: ' >';
+}
+.switch-to-login:hover {
+  text-decoration: underline;
+  opacity: 0.75;
+}
+.switch-to-login:active {
+  opacity: 0.5;
+}
+
+/* .signup-container form button {
+  margin-bottom: 2rem;
+} */

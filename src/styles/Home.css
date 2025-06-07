@@ -1,0 +1,84 @@
+.login-container,
+.signup-container,
+.logout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logout-container button {
+  max-width: 400px;
+}
+.home-container {
+  width: 500px;
+  max-width: 1000px;
+  /* height: 3000px; */
+}
+.home-container form {
+  /* border: 1px solid red; */
+  display: block;
+  /* width: 15rem; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.home-container form label {
+  opacity: 0.75;
+  color: rgb(168, 168, 168);
+}
+
+.home-container form input {
+  box-sizing: border-box;
+  font-family: inherit;
+  width: 100%;
+  height: 40px;
+  padding-inline: 5px;
+  border-radius: 4px;
+
+  background-color: rgba(25, 25, 25, 0.1);
+  border: 1px solid rgba(50, 50, 50, 0.1);
+}
+
+.home-container input:hover {
+  border: 1px solid #767676;
+  cursor: pointer;
+}
+
+.home-container input:focus {
+  cursor: text;
+  outline: none;
+  border: 1px solid white;
+}
+.home-container button {
+  position: relative;
+  /* top: 149px; */
+
+  font-family: inherit;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: rgba(50, 50, 50, 0.2);
+  color: rgb(168, 168, 168);
+}
+
+.home-container button:hover,
+.home-container button:focus {
+  opacity: 0.8;
+}
+.home-container button:active {
+  opacity: 0.5;
+}
+.home-container button:focus {
+  outline: none;
+  border: 1px solid white;
+}
+
+.errors {
+  color: rgb(238, 109, 154);
+}
+.errors::before {
+  content: '*';
+}

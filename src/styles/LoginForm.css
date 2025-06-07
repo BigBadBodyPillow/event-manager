@@ -1,0 +1,40 @@
+.login-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.login-container form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container form div {
+  width: 100%;
+}
+
+.switch-to-signup {
+  cursor: pointer;
+  margin-right: auto;
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* left: 0; */
+
+  /* this was before i decided to move the a to bellow the button */
+  /* height of button + half of own width up*/
+  /* bottom: calc(40px + 0.5rem); */
+}
+.switch-to-signup::before {
+  content: '< ';
+}
+.switch-to-signup:hover {
+  text-decoration: underline;
+  opacity: 0.75;
+}
+.switch-to-signup:active {
+  opacity: 0.5;
+}
+
+/* .login-container form button {
+  margin-bottom: 1rem;
+} */
