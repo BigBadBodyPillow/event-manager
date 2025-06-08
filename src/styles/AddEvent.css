@@ -1,31 +1,34 @@
-.login-container,
-.signup-container,
-.logout-container {
+.addevent-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.logout-container button {
-  max-width: 400px;
-}
-.home-container {
-  /* width: 500px; */
   max-width: 1000px;
-  /* height: 3000px; */
 }
-.home-container form {
+.addevent-container form {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 2.144rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
-.home-container form label {
+
+.addevent-container form label {
   opacity: 0.75;
   color: rgb(168, 168, 168);
 }
-
-.home-container form input {
+.addevent-container form div {
+  position: relative;
+  width: 100%;
+}
+.addevent-container form input,
+.addevent-container form textarea {
   box-sizing: border-box;
   font-family: inherit;
   width: 100%;
@@ -36,21 +39,32 @@
   background-color: rgba(25, 25, 25, 0.1);
   border: 1px solid rgba(50, 50, 50, 0.1);
 }
+.addevent-container form textarea {
+  min-height: 5rem;
+  min-width: 100%;
+  max-width: 100%;
+}
 
-.home-container input:hover {
+.addevent-container form input:hover,
+.addevent-container form textarea:hover {
   border: 1px solid #767676;
   cursor: pointer;
 }
 
-.home-container input:focus {
+.addevent-container form input:focus,
+.addevent-container form textarea:focus {
   cursor: text;
   outline: none;
   border: 1px solid white;
 }
-.home-container button {
+
+.addevent-container form button {
+  /* width: 100%;
+  max-width: 400px; */
   position: relative;
   /* top: 149px; */
 
+  margin-top: 20px;
   font-family: inherit;
   width: 100%;
   height: 40px;
@@ -60,27 +74,20 @@
   color: rgb(168, 168, 168);
 }
 
-.home-container button:hover,
-.home-container button:focus {
+.addevent-container button:hover,
+.addevent-container button:focus {
   opacity: 0.8;
 }
-.home-container button:active {
+.addevent-container button:active {
   opacity: 0.5;
 }
-.home-container button:focus {
+.addevent-container button:focus {
   outline: none;
   border: 1px solid white;
 }
 
-.errors {
-  color: rgb(238, 109, 154);
-}
-.errors::before {
-  content: '*';
-}
-
-@media (width >= 550px) {
-  .home-container {
+@media (width >= 580px) {
+  .addevent-container {
     width: 500px;
   }
 }
