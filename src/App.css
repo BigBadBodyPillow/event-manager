@@ -1,5 +1,6 @@
 :root {
   --accent: #ff70cb;
+  --text_colour: rgb(168, 168, 168);
   --border_colour: rgba(255, 255, 255, 0.198);
 }
 :root * {

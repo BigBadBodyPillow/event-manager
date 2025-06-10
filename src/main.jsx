@@ -12,6 +12,9 @@ import AddEvent from './components/AddEvent.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import Help from './components/Help.jsx';
 
+// context
+import { LoginProvider } from './context/LoginContext.jsx';
+import { EventProvider } from './context/EventContext.jsx';
 //routes
 const router = createBrowserRouter([
   {
@@ -50,6 +53,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <LoginProvider>
+      <EventProvider>
+        <RouterProvider router={router} />
+      </EventProvider>
+    </LoginProvider>
   </StrictMode>
 );

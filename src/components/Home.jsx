@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { LoginContext } from '../context/LoginContext.jsx';
 
 //components
 import LoginForm from './LoginForm.jsx';
@@ -9,27 +10,35 @@ import '../styles/Home.css';
 
 function Home() {
   const [showLogin, setShowLogin] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [username, setUsername] = useState('');
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [username, setUsername] = useState('');
+  const { isLoggedIn, username, login, logout } = useContext(LoginContext);
 
   const handleSignUpSuccess = () => {
     setShowLogin(true);
   };
 
-  const handleLoginSuccess = (usernameFromLogin) => {
-    setIsLoggedIn(true);
-    setUsername(usernameFromLogin);
+  // const handleLoginSuccess = (usernameFromLogin) => {
+  //   setIsLoggedIn(true);
+  //   setUsername(usernameFromLogin);
+  // };
+  const handleLogin = (usernameFromLogin) => {
+    login(usernameFromLogin);
   };
 
+  // const handleLogout = () => {
+  //   setIsLoggedIn(false);
+  //   setShowLogin(false);
+  //   // reset username and loggedinuser
+  //   setUsername('');
+  // };
   const handleLogout = () => {
-    setIsLoggedIn(false);
+    logout();
     setShowLogin(false);
-    // reset username from welcome message
-    setUsername('');
   };
 
   return (
-    <div className="home-container">
+    <div className="home">
       <h2>Home</h2>
       {isLoggedIn ? (
         <div className="logout-container">
@@ -43,7 +52,7 @@ function Home() {
         <div className="login-container">
           <h1>Login</h1>
           <LoginForm
-            onLoginSuccess={handleLoginSuccess}
+            onLoginSuccess={handleLogin}
             onShowSignUp={() => setShowLogin(false)}
             // on click
           />
