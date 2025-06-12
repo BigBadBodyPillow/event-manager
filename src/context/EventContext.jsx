@@ -70,8 +70,8 @@ export function EventProvider({ children }) {
 
   // delete
   function deleteEvent(selectedEvent) {
+    // keep events that are != to selectedEvent
     setEvents((previousEvents) =>
-      // keep events that are != to selectedEvent
       previousEvents.filter((_, id) => id != selectedEvent)
     );
   }

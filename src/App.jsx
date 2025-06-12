@@ -14,7 +14,7 @@ function App({ children }) {
       <main>{children}</main>
       <Footer />
 
-      <Background hidden="true" />
+      <Background />
     </>
   );
 }

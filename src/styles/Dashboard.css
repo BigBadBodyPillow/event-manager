@@ -75,20 +75,23 @@
   padding-left: 0.25rem;
 }
 
-.table-header {
+.table-row:first-child {
   border-radius: 4px;
   background: rgb(255, 112, 203);
   color: white;
   margin-bottom: 0.5rem;
 }
-.date {
-  min-width: 7em;
+/* default colour not the titles  */
+.table-row:not(:first-child) {
+  background: rgba(50, 50, 50, 0.5);
 }
-.even {
+/* every even cell (count starts from the title row)*/
+.table-row:nth-child(2n) {
   background: rgba(25, 25, 25, 0.5);
 }
-.odd {
-  background: rgba(50, 50, 50, 0.5);
+
+.date {
+  min-width: 7em;
 }
 
 /* first and last row  */

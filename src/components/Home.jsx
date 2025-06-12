@@ -14,28 +14,18 @@ function Home() {
   // const [username, setUsername] = useState('');
   const { isLoggedIn, username, login, logout } = useContext(LoginContext);
 
-  const handleSignUpSuccess = () => {
+  function handleSignUpSuccess() {
     setShowLogin(true);
-  };
+  }
 
-  // const handleLoginSuccess = (usernameFromLogin) => {
-  //   setIsLoggedIn(true);
-  //   setUsername(usernameFromLogin);
-  // };
-  const handleLogin = (usernameFromLogin) => {
+  function handleLogin(usernameFromLogin) {
     login(usernameFromLogin);
-  };
+  }
 
-  // const handleLogout = () => {
-  //   setIsLoggedIn(false);
-  //   setShowLogin(false);
-  //   // reset username and loggedinuser
-  //   setUsername('');
-  // };
-  const handleLogout = () => {
+  function handleLogout() {
     logout();
     setShowLogin(false);
-  };
+  }
 
   return (
     <div className="home">
@@ -48,7 +38,7 @@ function Home() {
           </button>
         </div>
       ) : showLogin ? (
-        // if clicked login button show login form
+        //  show login form
         <div className="login-container">
           <h1>Login</h1>
           <LoginForm

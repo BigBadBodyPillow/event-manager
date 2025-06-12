@@ -1,7 +1,7 @@
 import '../styles/RainbowLine.css';
 
-function RainbowLine() {
+export default function RainbowLine() {
   return <div className="rainbow-line"></div>;
 }
 
-export default RainbowLine;
+// export default RainbowLine;

@@ -5,7 +5,7 @@ import '../styles/SignupForm.css';
 const validate = (values) => {
   const errors = {};
 
-  // first
+  // username
   if (!values.username) {
     errors.username = 'Required';
   } else if (values.username.length > 20) {
