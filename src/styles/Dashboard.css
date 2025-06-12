@@ -1,6 +1,61 @@
 .dashboard {
   overflow-x: auto;
 }
+.dashboard-title {
+  /* display: block; */
+  width: 100%;
+  /* position: relative; */
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+}
+/* so its centered */
+.dashboard-title h2 {
+  line-height: 1.5;
+}
+.delete-event {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.delete-event select,
+.delete-event button {
+  height: 40px;
+}
+.delete-event select {
+  border: 1px solid rgba(124, 124, 124, 0.198);
+  border-radius: 4px;
+  background: rgba(25, 25, 25, 0.5);
+  color: var(--text_colour);
+
+  padding-inline: 1rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.delete-event button {
+  font-family: inherit;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: rgba(50, 50, 50, 0.2);
+  color: var(--text_colour);
+}
+
+.delete-event button:hover,
+.delete-event button:focus,
+.delete-event select:hover,
+.delete-event select:focus {
+  opacity: 0.8;
+}
+.delete-event button:active,
+.delete-event select:active {
+  opacity: 0.5;
+}
+.delete-event button:focus,
+.delete-event select:focus {
+  outline: none;
+  border: 1px solid white;
+}
 .table {
   width: 100%;
   display: flex;
@@ -26,7 +81,9 @@
   color: white;
   margin-bottom: 0.5rem;
 }
-
+.date {
+  min-width: 7em;
+}
 .even {
   background: rgba(25, 25, 25, 0.5);
 }
@@ -41,11 +98,26 @@
 .table-row:last-child {
   border-radius: 0 0 4px 4px;
 }
-
 /* to concatinate the desciption */
-/* .description-cell {
-  white-space: nowrap;
+.description.cell {
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-} */
+}
+
+@media (max-width: 400px) {
+  .table-row {
+    padding: 5px;
+  }
+  .table {
+    font-size: 0.8em;
+  }
+  .delete-event {
+    gap: 0.2rem;
+  }
+  .delete-event select {
+    padding-inline: 0.2rem;
+  }
+}

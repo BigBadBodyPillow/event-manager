@@ -23,7 +23,9 @@ const defaultEvents = [
     time: '09:30',
     name: 'Event 3',
     location: 'Location 3',
-    description: 'description 3.',
+    // description: 'description 3.',
+    description:
+      'description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.description 3.',
   },
 ];
 
@@ -62,12 +64,20 @@ export function EventProvider({ children }) {
   }, [events, isLoggedIn, username]);
 
   // add to end of the default events
-  const addEvent = (event) => {
-    setEvents((prev) => [...prev, event]);
-  };
+  function addEvent(newEvent) {
+    setEvents((previousEvents) => [...previousEvents, newEvent]);
+  }
+
+  // delete
+  function deleteEvent(selectedEvent) {
+    setEvents((previousEvents) =>
+      // keep events that are != to selectedEvent
+      previousEvents.filter((_, id) => id != selectedEvent)
+    );
+  }
 
   return (
-    <EventContext.Provider value={{ events, addEvent }}>
+    <EventContext.Provider value={{ events, addEvent, deleteEvent }}>
       {children}
     </EventContext.Provider>
   );

@@ -21,12 +21,12 @@
 main {
   max-width: 1000px;
   width: fit-content;
-  margin-block: auto;
 
   border: 1px solid var(--border_colour);
   border-radius: 8px;
   padding: 2rem 2rem;
 
+  margin-block: auto;
   margin-top: 8rem;
   margin-bottom: 5rem;
 
@@ -38,4 +38,7 @@ h2 {
   margin: 0;
   line-height: 1.5rem;
   font-size: 1.5rem;
+}
+input {
+  font-family: inherit;
 }

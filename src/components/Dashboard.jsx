@@ -2,6 +2,9 @@ import { useContext } from 'react';
 //css
 import '../styles/Dashboard.css';
 
+//components
+import DeleteEvent from './DeleteEvent.jsx';
+
 //context
 import { EventContext } from '../context/EventContext.jsx';
 
@@ -34,8 +37,10 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-      <h2>Dashboard</h2>
-
+      <div className="dashboard-title">
+        <h2>Dashboard</h2>
+        <DeleteEvent />
+      </div>
       <div className="table">
         <div className="table-row table-header">
           <div className="date">Date</div>
@@ -44,11 +49,11 @@ function Dashboard() {
           <div className="location">Location</div>
           <div className="description">Description</div>
         </div>
-        {events.map((row, id) => (
+        {events.map((row, key) => (
           // if id is even add class even or odd if its odd
           <div
-            className={`table-row ${id % 2 === 0 ? ' even' : ' odd'}`}
-            key={id}
+            className={`table-row ${key % 2 === 0 ? ' even' : ' odd'}`}
+            key={key}
           >
             <div className="date cell">{row.date}</div>
             <div className="time cell">{row.time}</div>

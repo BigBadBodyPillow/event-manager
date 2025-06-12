@@ -40,13 +40,19 @@
   padding-inline: 1rem;
 
   color: white;
+  border-bottom: 1px solid transparent;
 }
 
 .nav-links li a:hover {
-  background-color: black;
+  /* background-color: black; */
+  backdrop-filter: blur(4px);
   color: var(--accent);
-  /* text-decoration: underline; */
 }
 .nav-links li a:hover::selection {
   color: rgb(255, 255, 255);
+}
+
+.nav-links li a:focus {
+  outline: none;
+  border-bottom: 1px solid white;
 }
