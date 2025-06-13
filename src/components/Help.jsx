@@ -14,7 +14,7 @@ function Help() {
             src="https://youtu.be/XoBGQ0WRXDg?si=aYyV5kvfRAproM3u"
           ></iframe> */}
           <iframe
-            height="315"
+            //height="315"
             src="https://www.youtube-nocookie.com/embed/KVdJyP4mjmQ?si=oDpzaIJev0H3RJXi"
             title="YouTube video player"
             frameborder="0"
@@ -51,7 +51,7 @@ function Help() {
         <section className="login-section">
           <h3>Log In</h3>
           <iframe
-            height="315"
+            //height="315"
             src="https://www.youtube-nocookie.com/embed/rrn0TaAHCZ8?si=vvkifNFdp8Xd-9wS"
             title="YouTube video player"
             frameborder="0"
@@ -86,7 +86,7 @@ function Help() {
         <section className="add-event-section">
           <h3>Add Events</h3>
           <iframe
-            height="315"
+            //height="315"
             src="https://www.youtube-nocookie.com/embed/yb2bwjnQmkE?si=JUFiTHwBJLcsZn49"
             title="YouTube video player"
             frameborder="0"
@@ -138,7 +138,7 @@ function Help() {
         <section className="delete-event-section">
           <h3>Delete Events</h3>
           <iframe
-            height="315"
+            //height="315"
             src="https://www.youtube-nocookie.com/embed/3-aMSZy10es?si=REXRni_8JUFigVLx"
             title="YouTube video player"
             frameborder="0"

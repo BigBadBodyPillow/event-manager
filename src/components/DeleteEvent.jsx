@@ -25,7 +25,7 @@ export default function DeleteEvent() {
           </option>
         ))}
       </select>
-      <button onClick={handleDelete}>Delete</button>
+      <button onClick={handleDelete}>Remove</button>
     </div>
   );
 }
